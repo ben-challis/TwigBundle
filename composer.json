@@ -1,0 +1,27 @@
+{
+  "name": "lendable/twig-bundle",
+  "type": "symfony-bundle",
+  "description": "load twig templates from the database",
+  "keywords": [
+    "tag",
+    "Symfony2"
+  ],
+  "homepage": "https://github.com/Lendable/TwigBundle.git",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "The Lendable Team",
+      "email": "contact@lendable.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.2",
+    "symfony/framework-bundle": "~2.1"
+  },
+  "autoload": {
+    "psr-0": {
+      "Alpha\\TwigBundle": ""
+    }
+  },
+  "target-dir": "Alpha/TwigBundle"
+}
