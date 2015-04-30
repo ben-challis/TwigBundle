@@ -21,9 +21,9 @@ class UrlDecodeExtension extends \Twig_Extension
      *
      * @return string The decoded URL
      */
-    public function urlDecode( $url )
+    public function urlDecode($url)
     {
-        return urldecode( $url );
+        return urldecode($url);
     }
 
     /**

@@ -24,3 +24,7 @@ services:
         class: Alpha\TwigBundle\Extension\UrlDecodeExtension
         tags:
             -  { name: twig.extension }
+    alpha.twig.extension.yaml_dump:
+        class: Alpha\TwigBundle\Extension\YamlDumpExtension
+        tags:
+            -  { name: twig.extension }
