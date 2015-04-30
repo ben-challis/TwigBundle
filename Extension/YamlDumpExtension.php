@@ -11,9 +11,9 @@ class YamlDumpExtension extends \Twig_Extension
      */
     public function getFilters()
     {
-        return array(
+        return [
             'yaml_dump' => new \Twig_Filter_Method($this, 'yamlDump')
-        );
+        ];
     }
 
     /**
@@ -21,13 +21,14 @@ class YamlDumpExtension extends \Twig_Extension
      *
      * @param array $data
      *
+     * @param int $level
      * @return string The YAML representation of the array
      */
-    public function yamlDump(array $data)
+    public function yamlDump(array $data, $level = 0)
     {
         $dumper = new Dumper();
 
-        return $dumper->dump($data);
+        return $dumper->dump($data, $level);
     }
 
     /**
