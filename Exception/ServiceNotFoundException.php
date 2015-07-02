@@ -1,6 +1,6 @@
 <?php
 
-namespace Alpha\SiteBundle\Exception;
+namespace Alpha\TwigBundle\Exception;
 
 use RuntimeException;
 

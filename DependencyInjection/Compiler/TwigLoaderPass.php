@@ -2,7 +2,7 @@
 
 namespace Alpha\TwigBundle\DependencyInjection\Compiler;
 
-use Alpha\SiteBundle\Exception\ServiceNotFoundException;
+use Alpha\TwigBundle\Exception\ServiceNotFoundException;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 
