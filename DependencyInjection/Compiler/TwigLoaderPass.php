@@ -10,10 +10,10 @@ class TwigLoaderPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        $this->validateServices($container, ['twig.loader.chain', 'twig', 'twig.loader.filesystem', 'alpha_twig.loader.database']);
+        $this->validateServices($container, ['twig.loader.chain', 'twig', 'twig.loader.filesystem', 'alpha_twig.loader.database', 'alpha_twig.loader.string']);
 
         $twigChainLoaderDefinition = $container->getDefinition('twig.loader.chain');
-        $arguments = [[$container->getDefinition('twig.loader.filesystem'), $container->getDefinition('alpha_twig.loader.database')]];
+        $arguments = [[$container->getDefinition('twig.loader.filesystem'), $container->getDefinition('alpha_twig.loader.database'), $container->getDefinition('alpha_twig.loader.string')]];
         $twigChainLoaderDefinition->setArguments($arguments);
 
         $twigDefinition = $container->getDefinition('twig');
