@@ -8,8 +8,7 @@ use DateTime;
 /**
  * Template
  *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="Alpha\TwigBundle\Entity\TemplateRepository")
+ * @ORM\MappedSuperclass()
  * @ORM\HasLifecycleCallbacks()
  */
 class Template
@@ -21,35 +20,35 @@ class Template
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      *
      * @ORM\Column(name="source", type="text")
      */
-    private $source;
+    protected $source;
 
     /**
      * @var array
      *
      * @ORM\Column(name="services", type="array", nullable=true)
      */
-    private $services;
+    protected $services;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="lastModified", type="datetime")
      */
-    private $lastModified;
+    protected $lastModified;
 
     /**
      * Get id
