@@ -10,10 +10,12 @@ use Twig_Error_Loader;
 class DatabaseTwigLoader implements Twig_LoaderInterface
 {
     protected $em;
+    protected $entity;
 
-    public function __construct(EntityManagerInterface $em)
+    public function __construct(EntityManagerInterface $em, $entity)
     {
         $this->em = $em;
+        $this->entity = $entity;
     }
 
     public function getSource($name)
@@ -43,7 +45,7 @@ class DatabaseTwigLoader implements Twig_LoaderInterface
     {
         try {
             $result = $this->em
-                ->getRepository('AlphaTwigBundle:Template')
+                ->getRepository($this->entity)
                 ->createQueryBuilder('t')
                 ->select('t.' . $column)
                 ->where('t.name = :name')

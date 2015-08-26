@@ -9,6 +9,7 @@ services:
         class: %alpha_twig.loader.database.class%
         arguments:
             - @doctrine.orm.default_entity_manager
+            - %alpha_twig.entity.template.class%
 
     alpha_twig.loader.string:
         class: %alpha_twig.loader.string.class%
